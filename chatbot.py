@@ -7,7 +7,8 @@ url = 'https://chatbot-ierzc.northeurope.inference.ml.azure.com/score'
 api_key = 'ZBOmGtdwONwlxnHTyItY70TmuL3qUTaF'
 
 # Define a function to send a message to the chatbot API and get a response
-def send_message(message):
+
+def send_message(message, max_length=1000):
     # Construct the request data as a dictionary
     data = {"question": message}
 
@@ -22,6 +23,10 @@ def send_message(message):
 
     # Parse the response JSON and extract the answer
     answer = response.json()['answer']
+
+    # Truncate the answer if it exceeds the maximum length
+    if len(answer) > max_length:
+        answer = answer[:max_length] + '...'
 
     return answer
 
