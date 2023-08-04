@@ -3,8 +3,8 @@ import requests
 import json
 
 # Define the URL and API key for your Azure REST API
-url = 'https://chatbot-ierzc.northeurope.inference.ml.azure.com/score'
-api_key = 'ZBOmGtdwONwlxnHTyItY70TmuL3qUTaF'
+url = 'https://chatbot-dcqxa.northeurope.inference.ml.azure.com/score'
+api_key = 'g0O1T9GKcF2BtmcPscWTm83NYQq6xwDk'
 
 # Define a function to send a message to the chatbot API and get a response
 
@@ -27,6 +27,9 @@ def send_message(message, max_length=1000):
     # Truncate the answer if it exceeds the maximum length
     if len(answer) > max_length:
         answer = answer[:max_length] + '...'
+        print(f'Truncated answer to {max_length} characters')
+
+    print(f'Answer length: {len(answer)}')
 
     return answer
 
