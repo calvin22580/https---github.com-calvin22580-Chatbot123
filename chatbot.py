@@ -2,13 +2,17 @@ import streamlit as st
 import requests
 import json
 
-# Define the URL and API key for your Azure REST API
+# Set the width of the output window
+st.set_page_config(layout="wide")
+
+# Define the URL of the chatbot API
 url = 'https://chatbot-dcqxa.northeurope.inference.ml.azure.com/score'
+
+# Define the API key for the chatbot API
 api_key = 'g0O1T9GKcF2BtmcPscWTm83NYQq6xwDk'
 
 # Define a function to send a message to the chatbot API and get a response
-
-def send_message(message, max_length=1000):
+def send_message(message, max_length=10000):
     # Construct the request data as a dictionary
     data = {"question": message}
 
