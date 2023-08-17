@@ -6,10 +6,10 @@ import json
 st.set_page_config(layout="wide")
 
 # Define the URL of the chatbot API
-url = 'https://chatbot-fwqtq.northeurope.inference.ml.azure.com/score'
+url = 'https://chatbot-pzcsm.northeurope.inference.ml.azure.com/score'
 
 # Define the API key for the chatbot API
-api_key = '2ctzXhBg7chrNUqB16MvnaEkLapPRaWN'
+api_key = 'jcRhLwENl8rh8DKiy9OEAceOpxGiLgne'
 
 # Define a function to send a message to the chatbot API and get a response
 def send_message(message, max_length=10000):
