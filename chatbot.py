@@ -26,7 +26,7 @@ def send_message(message, max_length=10000):
     response = requests.post(url, headers=headers, data=body)
 
     # Parse the response JSON and extract the answer
-    answer = response.json()['answer']
+    answer = response.json()['output']
 
     # Truncate the answer if it exceeds the maximum length
     if len(answer) > max_length:
