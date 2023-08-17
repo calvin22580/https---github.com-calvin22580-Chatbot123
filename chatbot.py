@@ -3,7 +3,7 @@ import requests
 import json
 
 # Set the width of the output window
-st.set_page_config(layout="centered", theme="light")
+st.set_page_config(layout="wide")
 
 # Define the URL of the chatbot API
 url = 'https://chatbot-pzcsm.northeurope.inference.ml.azure.com/score'
